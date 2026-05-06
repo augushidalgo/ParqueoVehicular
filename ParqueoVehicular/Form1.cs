@@ -11,32 +11,42 @@ namespace ParqueoVehicular
         {
             double costo = 0;
             string tipo = string.Empty;
+            string marca = string.Empty;
             if (cbTipoVehiculo.Text == "Carro")
             {
-                Vehiculo carro = new Carro();
+                Carro carro = new Carro("Toyota",int.Parse(txtHorasUso.Text) );
                 carro.Placa = txtPlaca.Text;
-                carro.Horas = int.Parse(txtHorasUso.Text);
+                // carro.Horas = ;
+                marca = carro.MostrarMarca();
                 costo = carro.CalcularCosto();
                 tipo = carro.MostrarTipo();
             }
             else if (cbTipoVehiculo.Text == "Moto")
             {
-                Vehiculo moto = new Moto();
+                Vehiculo moto = new Moto("Honda",int.Parse(txtHorasUso.Text));
                 moto.Placa = txtPlaca.Text;
-                moto.Horas = int.Parse(txtHorasUso.Text);
+                // moto.Horas = ;
                 costo = moto.CalcularCosto();
                 tipo = moto.MostrarTipo();
             }
+            else if(cbTipoVehiculo.Text == "Camion")
+            {
+                Vehiculo camion = new Camion("Mercedes Benz", int.Parse(txtHorasUso.Text));
+                camion.Placa = txtPlaca.Text;
+                // camion.Horas = ;
+                costo = camion.CalcularCosto();
+                tipo = camion.MostrarTipo();
+            }
             else
             {
-                Vehiculo bici = new Bici();
+                Vehiculo bici = new Bici("Benotto", int.Parse(txtHorasUso.Text));
                 bici.Placa = "Sin placa";
-                bici.Horas = int.Parse(txtHorasUso.Text);
+                // bici.Horas = ;
                 costo = bici.CalcularCosto();
                 tipo = bici.MostrarTipo();
             }
 
-            lblResultado.Text = $"Tipo {tipo}, C$ {costo}";
+            lblResultado.Text = $"Tipo {tipo}, Marca {marca} C$ {costo}";
         }
     }
 }

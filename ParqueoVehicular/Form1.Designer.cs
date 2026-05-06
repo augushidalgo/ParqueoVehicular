@@ -97,7 +97,7 @@
             // cbTipoVehiculo
             // 
             cbTipoVehiculo.FormattingEnabled = true;
-            cbTipoVehiculo.Items.AddRange(new object[] { "Carro", "Moto", "Bici" });
+            cbTipoVehiculo.Items.AddRange(new object[] { "Carro", "Moto", "Bici", "Camion" });
             cbTipoVehiculo.Location = new Point(166, 68);
             cbTipoVehiculo.Name = "cbTipoVehiculo";
             cbTipoVehiculo.Size = new Size(151, 28);

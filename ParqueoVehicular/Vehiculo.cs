@@ -6,8 +6,9 @@ namespace ParqueoVehicular
 {
     public abstract class Vehiculo
     {
+        protected string Marca { get; set; }
         public string Placa { get; set; }
-        private int horas;
+        protected int horas;
         public int Horas
         {
             get { return horas; }
@@ -18,6 +19,12 @@ namespace ParqueoVehicular
                     horas = value;
                 }
             }
+        }
+
+        public Vehiculo(string marca, int horas)
+        {
+            this.Marca = marca;
+            this.Horas = horas;
         }
 
         public abstract double CalcularCosto();

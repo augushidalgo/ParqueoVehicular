@@ -4,20 +4,19 @@ using System.Text;
 
 namespace ParqueoVehicular
 {
-    public class Moto: Vehiculo
+    public class Camion: Vehiculo
     {
-        public Moto(string marca, int horas) : base(marca, horas)
+        public Camion(string marca, int horas):base(marca, horas)
         {
 
         }
         public override double CalcularCosto()
         {
-            return Horas * 10;
+            return Horas * 40;
         }
-
         public override string MostrarTipo()
         {
-            return "Moto";
+            return "Camión";
         }
     }
 }
