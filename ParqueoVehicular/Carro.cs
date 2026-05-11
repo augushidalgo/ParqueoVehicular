@@ -23,13 +23,17 @@ namespace ParqueoVehicular
         {
             return Marca;
         }
-        public override double CalcularCostoDescuento()
+        public override double DescuentoRegular()
         {
-            return (Horas * 20) * 0.15;
+            double costo = Horas * 20;
+            double descuento = costo * 0.05;
+            return costo - descuento;
         }
-        public override double CalcularCostoDescuento(double descuento)
+        public override double DescuentoPersonalizado(double descuento)
         {
-            return (Horas * 20) * descuento;
+            double costo = Horas * 20;
+            double descuentoCalculado = costo * descuento;
+            return costo - descuentoCalculado;
         }
     }
 }

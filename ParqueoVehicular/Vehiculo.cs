@@ -33,13 +33,17 @@ namespace ParqueoVehicular
             return "Vehículo genérico";
         }
 
-        public virtual double CalcularCostoDescuento()
+        public virtual double DescuentoRegular()
         {
-            return Horas * 10;
+            double costo = Horas * 10;
+            double descuento = costo * 0.05;
+            return costo - descuento;
         }
-        public virtual double CalcularCostoDescuento(double descuento)
+        public virtual double DescuentoPersonalizado(double descuento)
         {
-            return (Horas * 10) * descuento;
+            double costo = Horas * 10;
+            double descuentoCalculado = costo * descuento;
+            return costo - descuentoCalculado;
         }
     }
 }
