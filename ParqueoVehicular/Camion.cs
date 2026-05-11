@@ -18,5 +18,10 @@ namespace ParqueoVehicular
         {
             return "Camión";
         }
+
+        public string MostrarMarca()
+        {
+            return Marca;
+        }
     }
 }

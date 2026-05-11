@@ -21,8 +21,15 @@ namespace ParqueoVehicular
 
         public string MostrarMarca()
         {
-            Marca = "Toyota";
             return Marca;
+        }
+        public override double CalcularCostoDescuento()
+        {
+            return (Horas * 20) * 0.15;
+        }
+        public override double CalcularCostoDescuento(double descuento)
+        {
+            return (Horas * 20) * descuento;
         }
     }
 }

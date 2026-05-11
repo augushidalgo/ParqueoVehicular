@@ -15,6 +15,9 @@ namespace ParqueoVehicular
             return Horas * 5;
         }
 
-        
+        public string MostrarMarca()
+        {
+            return Marca;
+        }
     }
 }

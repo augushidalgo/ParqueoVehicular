@@ -19,5 +19,9 @@ namespace ParqueoVehicular
         {
             return "Moto";
         }
+        public string MostrarMarca()
+        {
+            return Marca;
+        }
     }
 }
