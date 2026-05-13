@@ -9,6 +9,9 @@ namespace ParqueoVehicular
         public Carro(string marca, int horas):base(marca, horas)
         {  
         }
+        public Carro(string marca,string placa, int horas) : base(marca, placa, horas)
+        {
+        }
         public override double CalcularCosto()
         {
             return Horas * 20;

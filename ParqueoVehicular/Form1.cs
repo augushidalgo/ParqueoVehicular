@@ -20,6 +20,7 @@ namespace ParqueoVehicular
             if (cbTipoVehiculo.Text == "Carro")
             {
                 Carro carro = new Carro(txtMarca.Text, int.Parse(txtHorasUso.Text));
+                Carro carro2 = new Carro(txtMarca.Text, txtPlaca.Text, int.Parse(txtHorasUso.Text));
                 carro.Placa = txtPlaca.Text;
                 // carro.Horas = ;
                 marca = carro.MostrarMarca();

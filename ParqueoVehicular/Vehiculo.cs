@@ -26,6 +26,12 @@ namespace ParqueoVehicular
             this.Marca = marca;
             this.Horas = horas;
         }
+        public Vehiculo(string marca,string placa, int horas)
+        {
+            this.Marca = marca;
+            this.Placa = placa;
+            this.Horas = horas;
+        }
 
         public abstract double CalcularCosto();
         public virtual string MostrarTipo()
